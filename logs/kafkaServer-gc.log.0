@@ -1,0 +1,24 @@
+[2024-11-27T09:44:45.196-0800][gc] Using G1
+[2024-11-27T09:44:45.197-0800][gc,init] Version: 17.0.11+7-LTS-207 (release)
+[2024-11-27T09:44:45.197-0800][gc,init] CPUs: 12 total, 12 available
+[2024-11-27T09:44:45.197-0800][gc,init] Memory: 24576M
+[2024-11-27T09:44:45.197-0800][gc,init] Large Page Support: Disabled
+[2024-11-27T09:44:45.197-0800][gc,init] NUMA Support: Disabled
+[2024-11-27T09:44:45.197-0800][gc,init] Compressed Oops: Enabled (Zero based)
+[2024-11-27T09:44:45.197-0800][gc,init] Heap Region Size: 1M
+[2024-11-27T09:44:45.197-0800][gc,init] Heap Min Capacity: 1G
+[2024-11-27T09:44:45.197-0800][gc,init] Heap Initial Capacity: 1G
+[2024-11-27T09:44:45.197-0800][gc,init] Heap Max Capacity: 1G
+[2024-11-27T09:44:45.197-0800][gc,init] Pre-touch: Disabled
+[2024-11-27T09:44:45.197-0800][gc,init] Parallel Workers: 10
+[2024-11-27T09:44:45.197-0800][gc,init] Concurrent Workers: 3
+[2024-11-27T09:44:45.197-0800][gc,init] Concurrent Refinement Workers: 10
+[2024-11-27T09:44:45.197-0800][gc,init] Periodic GC: Disabled
+[2024-11-27T09:44:45.200-0800][gc,metaspace] CDS archive(s) mapped at: [0x000000c000000000-0x000000c000be0000-0x000000c000be0000), size 12451840, SharedBaseAddress: 0x000000c000000000, ArchiveRelocationMode: 1.
+[2024-11-27T09:44:45.200-0800][gc,metaspace] Compressed class space mapped at: 0x000000c001000000-0x000000c041000000, reserved size: 1073741824
+[2024-11-27T09:44:45.200-0800][gc,metaspace] Narrow klass base: 0x000000c000000000, Narrow klass shift: 0, Narrow klass range: 0x100000000
+[2024-11-27T09:45:04.548-0800][gc,heap,exit] Heap
+[2024-11-27T09:45:04.548-0800][gc,heap,exit]  garbage-first heap   total 1048576K, used 40930K [0x00000007c0000000, 0x0000000800000000)
+[2024-11-27T09:45:04.548-0800][gc,heap,exit]   region size 1024K, 40 young (40960K), 0 survivors (0K)
+[2024-11-27T09:45:04.548-0800][gc,heap,exit]  Metaspace       used 13551K, committed 13696K, reserved 1114112K
+[2024-11-27T09:45:04.548-0800][gc,heap,exit]   class space    used 1876K, committed 1920K, reserved 1048576K
