@@ -25,6 +25,14 @@ bin/kafka-topics.sh \
 --partitions 3 \
 --topic test
 
+CREATE TOPIC
+bin/kafka-topics.sh \
+--bootstrap-server localhost:9092,localhost:9093,localhost:9094 \
+--create \
+--replication-factor 3 \
+--partitions 5 \
+--topic animals
+
 CREATE TOPIC FOR MULTIPLE BROKERS
 bin/kafka-topics.sh \
 --bootstrap-server localhost:9092,localhost:9093,localhost:9094 \
