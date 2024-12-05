@@ -16,6 +16,7 @@ public class Producer {
         KafkaProducer<String, String> producer = new KafkaProducer<>(props);
         int numOfRecords = 100;
         for (int i = 0; i < numOfRecords; i++) {
+            System.out.println("Message " + i + " was just produced");
             producer.send(new ProducerRecord<String, String>("numbers", Integer.toString(i), Integer.toString(i)));
         }
         producer.close();
