@@ -18,13 +18,23 @@ public class Producer {
         props.put("client.id", clientId);
 
         KafkaProducer<String, String> producer = new KafkaProducer<>(props);
+
         int numOfRecords = 100;
         String topic = "strings";
+
+        // Example #1 (String messages)
         for (int i = 0; i < numOfRecords; i++) {
             String message = String.format("Producer %s has sent message %s at %s", clientId, i, new Date());
             System.out.println(message);
             producer.send(new ProducerRecord<String, String>(topic, Integer.toString(i), message));
         }
         producer.close();
+
+//        Example #2 Numbers as strings
+/*        for (int i = 0; i < numOfRecords; i++) {
+            System.out.println("Message" + i + " was just sent");
+            producer.send(new ProducerRecord<String, String>(topic, Integer.toString(i), Integer.toString(i)));
+        }
+        producer.close();*/
     }
 }
