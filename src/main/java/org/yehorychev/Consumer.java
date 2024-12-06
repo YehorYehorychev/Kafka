@@ -28,7 +28,8 @@ public class Consumer {
             while (true) {
                 ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(100));
                 for (ConsumerRecord<String, String> record : records) {
-                    System.out.printf("offset = %d, key = %s, value = %s%n", record.offset(), record.key(), record.value());
+                    System.out.printf("offset = %d, key = %s, value = %s%n",
+                            record.offset(), record.key(), record.value());
                 }
             }
         } catch (Exception e) {
