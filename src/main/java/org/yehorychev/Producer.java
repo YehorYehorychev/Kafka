@@ -18,6 +18,7 @@ public class Producer {
 
         int numOfRecords = 100;
         String topic = "numbers";
+
 //        Example #1 (String messages)
 /*        try (KafkaProducer<String, String> producer = new KafkaProducer<>(props)) {
             for (int i = 0; i < numOfRecords; i++) {
