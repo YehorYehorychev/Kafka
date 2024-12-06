@@ -3,7 +3,6 @@ package org.yehorychev;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 
-import java.util.Date;
 import java.util.Properties;
 
 public class Producer {
@@ -17,10 +16,11 @@ public class Producer {
         props.put("acks", "all");
         props.put("client.id", clientId);
 
-        // Example #1 (String messages)
-        try (KafkaProducer<String, String> producer = new KafkaProducer<>(props)) {
-            int numOfRecords = 100;
-            String topic = "strings";
+        int numOfRecords = 100;
+        String topic = "numbers";
+
+//        Example #1 (String messages)
+/*        try (KafkaProducer<String, String> producer = new KafkaProducer<>(props)) {
             for (int i = 0; i < numOfRecords; i++) {
                 String message = String.format("Producer %s has sent message %s at %s", clientId, i, new Date());
                 System.out.println(message);
@@ -35,14 +35,14 @@ public class Producer {
             }
         } catch (Exception e) {
             e.printStackTrace();
-        }
+        }*/
 
-
-//        Example #2 Numbers as strings
-/*        for (int i = 0; i < numOfRecords; i++) {
+//      Example #2 Numbers as strings
+        KafkaProducer<String, String> producer = new KafkaProducer<>(props);
+        for (int i = 0; i < numOfRecords; i++) {
             System.out.println("Message" + i + " was just sent");
             producer.send(new ProducerRecord<String, String>(topic, Integer.toString(i), Integer.toString(i)));
         }
-        producer.close();*/
+        producer.close();
     }
 }
